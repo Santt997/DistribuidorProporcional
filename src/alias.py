@@ -9,7 +9,7 @@ class Agrupacion:
         
         self.miembros: list[Alias] = []
 
-    def proveer(self):
+    def proveer(self) -> None:
         '''
             Hace que alias raiz transfieran
             a sus dependencias
@@ -17,16 +17,16 @@ class Agrupacion:
         for miembro in self.miembros:
             miembro.transferir()   
 
-    def agregar(self, alias: str, corresponde: float):
+    def agregar(self, alias: str, corresponde: float) -> None:
         '''
             Agrega nuevo miembro dependiente
             con una correspondencia mayor a
             cero y menor o igual a 1.00 del
             total.
         '''       
-        if (corresponde > 0.00 and corresponde <= 1.00):
+        if 0.00 < corresponde <= 1.00:
             # Agrego solo si cumple requerimiento para prevenir problemas
-            miembro = Alias()
+            miembro: Alias = Alias()
             # Defino alias y cuanto le corresponde al miembro
             miembro.corresponde = corresponde
             miembro.alias = alias
@@ -53,7 +53,7 @@ class Alias:
 
         self.alias: str = ''
 
-    def transferir(self):
+    def transferir(self) -> None:
         '''
             Transfiere lo necesario del
             monto a cada miembro del grupo
@@ -62,8 +62,7 @@ class Alias:
             # Realiza la transferencia mientras haya dinero a los primeros del grupo
             if  (
                     self.monto > 0.00 
-                    and (miembro.corresponde > 0.00)
-                    and (miembro.corresponde <= 1.00)
+                    and (0.00 < miembro.corresponde <= 1.00)
                 ):
                 # transfiere lo que corresponde del monto a miembro del grupo
                 miembro.monto += (miembro.corresponde * self.monto)
@@ -71,7 +70,7 @@ class Alias:
                 # Nada mas que repartir
                 break  
 
-    def agregar(self, alias: str, corresponde: float):
+    def agregar(self, alias: str, corresponde: float) -> None:
         '''
             agrega nuevo miembro al grupo
         '''         
