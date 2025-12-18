@@ -24,7 +24,7 @@ conda env create --file UMLgen-py310.yml -y
 ```bash
 cd ~/Documents/GitHub/Nuevo/envs &&
 conda env update --file UMLgen-py310.yml --prune && 
-conda env export -n UMLgen-py310 > UMLgen-py310.yml.tmp && 
+conda env export -n UMLgen-py310 > UMLgen0-py310.yml.tmp && 
 if [[ ! -f UMLgen-py310.yml || $(md5sum UMLgen-py310.yml.tmp | cut -d' ' -f1) != $(md5sum UMLgen-py310.yml | cut -d' ' -f1) ]]; then
   mv UMLgen-py310.yml.tmp UMLgen-py310.yml && echo "✅ Actualizado" && stat UMLgen-py310.yml
 else
