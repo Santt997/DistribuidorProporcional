@@ -5,3 +5,5 @@ channels:
 dependencies:
   - python=3.10
   - plantuml
+  - pylint       # Esto incluye pyreverse
+  - graphviz     # Para el comando 'dot' que genera imágenes
