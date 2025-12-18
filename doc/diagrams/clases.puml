@@ -1,1 +1,16 @@
+@startuml
+class Agrupacion {
+  - miembros: List[Alias]
+  + proveer(): void
+  + agregar_miembro(alias: str, corresponde: float): void
+}
 
+class Alias {
+  - monto: float
+  - corresponde: float
+  - grupo: Agrupacion
+  + transferir(): void
+}
+
+Agrupacion "1" *-- "*" Alias : contiene >
+@enduml
