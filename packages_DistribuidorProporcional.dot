@@ -1,0 +1,6 @@
+digraph "packages_DistribuidorProporcional" {
+rankdir=BT
+charset="utf-8"
+"src" [color="black", label=<src>, shape="box", style="solid"];
+"src.alias" [color="black", label=<src.alias>, shape="box", style="solid"];
+}

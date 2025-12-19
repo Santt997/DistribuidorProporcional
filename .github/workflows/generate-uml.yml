@@ -2,7 +2,7 @@ name: Generate UML Diagram
 on:
   push:
     branches: [ main ]
-    paths: [ 'docs/diagramas/**/*.puml' ]
+    paths: [ 'doc/diagrams/**/*.puml' ]
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -15,14 +15,14 @@ jobs:
       - name: Setup Conda Environment
         uses: conda-incubator/setup-miniconda@v3
         with:
-          activate-environment: uml-generator
-          environment-file: environment.yml
+          activate-environment: envs/UMLgen-py310
+          environment-file: envs/UMLgen-py310.yml
           auto-activate-base: false
 
       - name: Generate PNG from PlantUML
         shell: bash -l {0}
         run: |
-          plantuml -verbose -png -o docs/diagramas docs/diagramas/*.puml
+          plantuml -verbose -png -o doc/diagrams doc/diagrams/*.puml
 
       - name: Commit and Push Generated Images
         if: github.ref == 'refs/heads/main'

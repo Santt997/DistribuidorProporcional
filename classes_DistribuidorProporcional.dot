@@ -1,0 +1,8 @@
+digraph "classes_DistribuidorProporcional" {
+rankdir=BT
+charset="utf-8"
+"src.alias.Agrupacion" [color="black", fontcolor="black", label=<{Agrupacion|miembros : list[Alias]<br ALIGN="LEFT"/>|agregar(alias: str, corresponde: float): None<br ALIGN="LEFT"/>proveer(): None<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.alias.Alias" [color="black", fontcolor="black", label=<{Alias|alias : str<br ALIGN="LEFT"/>corresponde : float<br ALIGN="LEFT"/>grupo<br ALIGN="LEFT"/>monto : float<br ALIGN="LEFT"/>|agregar(alias: str, corresponde: float): None<br ALIGN="LEFT"/>transferir(): None<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"src.alias.Agrupacion" -> "src.alias.Alias" [arrowhead="vee", arrowtail="none", fontcolor="green", label="miembros", style="solid"];
+"src.alias.Agrupacion" -> "src.alias.Alias" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="grupo", style="solid"];
+}
