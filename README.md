@@ -1,4 +1,4 @@
-# Nuevo
+# DistribuidorProporcional
 
 Una web app con Python y Streamlit para unificar transacciones, se transfiere a un solo alias el total y con lo establecido en cada uno de los alias asignados se transfiere lo que corresponde.
 
@@ -8,7 +8,8 @@ Se trata de una billetera virtual para transferencias múltiples con reglas asig
 
 ## Diagramas UML y documentacion de interes
 
-![Diagramas con las clases Alias y Agrupacion del modulo alias.py](doc/diagrama_alias.png)
+![Diagramas con las clases Alias y Agrupacion del modulo alias.py](doc/diagrams/classes_DistribuidorProporcional.png)
+![Diagramas con las clases Alias y Agrupacion del modulo alias.py](doc/diagrams/packages_DistribuidorProporcional.png)
 
 ## Fecha de inicio
 
