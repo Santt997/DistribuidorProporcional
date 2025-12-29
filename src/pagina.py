@@ -45,7 +45,7 @@ class Pagina():
         '''    
         while not iniciar_sesion():
             # Requiere que se inicie la sesion
-            if registra():
+            if registrar():
                 # Registro hasta que salga que pueda iniciar sesion
                 break
         # Usa el framework y los atributos con los datos necesarios
