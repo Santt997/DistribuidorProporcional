@@ -5,6 +5,7 @@ on:
     paths: # Se activa al cambiar código O diagramas fuente
       - 'doc/diagrams/**/*.puml'
       - 'src/**/*.py'
+      - 'src/*.py'
       - '!doc/diagrams/**/*.png' # Ignora cambios en las imágenes ya generadas
 
 jobs:
